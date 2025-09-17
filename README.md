@@ -15,7 +15,7 @@ School of Intelligent Civil and Marine Engineering, Harbin Institute of Technolo
 ## 🔎 Overview
 
 The **Adaptive Physics-Informed System Modeling (APSM)** framework integrates **residual-driven optimization** with **physics constraints** to enable **online system identification** 
-and **digital twin modeling** of large-scale civil infrastructure under **non-stationary conditions**. A detailed proof of APSM’s convergence to a physically consistent optimal estimate, as well as its extension to dynamical systems with input terms, can be found in our related article published in *Computer Methods in Applied Mechanics and Engineering*: [link](https://www.sciencedirect.com/science/article/abs/pii/S0045782525006024)
+and **digital twin modeling** of large-scale civil infrastructure under **non-stationary conditions**. 
 
 Key features of APSM:
 
