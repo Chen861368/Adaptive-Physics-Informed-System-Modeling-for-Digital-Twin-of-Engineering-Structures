@@ -39,32 +39,44 @@ Key features of APSM:
 
 The APSM framework has been validated through:
 
-1. **Five-Degree-of-Freedom System** – verifies robustness under noise and sparse measurements.
-2. **Van der Pol Oscillator** – demonstrates capability for nonlinear and time-varying dynamics.
-3. **Hangzhou Bay Bridge** – real-world validation with long-term acceleration monitoring data.
+1. **Five-Degree-of-Freedom System** – verifies robustness under noise and sparse measurements.  
+2. **Van der Pol Oscillator** – demonstrates capability for nonlinear and time-varying dynamics.  
+3. **Hangzhou Bay Bridge** – real-world validation with long-term acceleration monitoring data.  
 
 ---
 
-## 🚀 Getting Started
+## 📦 Contents
 
-### 1. Clone the repository
+- **Five Degrees of Freedom System1**  
+  Numerical simulation of a five-DOF mass–spring–damper system, used in the paper to validate APSM performance under noise and sparse measurements.  
 
-```bash
-git clone https://github.com/Chen861368/Adaptive-Physics-Informed-System-Modeling.git
-cd Adaptive-Physics-Informed-System-Modeling
-```
+- **Five Degrees of Freedom System2**  
+  Comparative study of APSM with and without **physical constraints**, highlighting differences in prediction accuracy and system matrix identification.  
 
-### 2. Install dependencies
+  **Notes**:  
+  1. Run the constrained and unconstrained codes separately.  
+  2. The random seed is fixed for reproducibility.  
+  3. Do not run both scripts simultaneously to avoid inconsistencies in random numbers.  
 
-```bash
-pip install -r requirements.txt
-```
+- **Van der Pol Oscillator**  
+  Implementation of a nonlinear oscillator with temperature-dependent stiffness and nonlinear damping. Includes RK4 integration, phase portrait visualization, and system identification using APSM.  
 
-### 3. Run APSM on sample data
+- **APSM_Algorithm**  
+  Core implementation of the APSM framework. Includes:  
+  * ERA (Eigensystem Realization Algorithm) for initial state-space model construction.  
+  * Online updating of system matrices using **Kalman Filter** and **proximal gradient descent**.
+  * The default data saving path should be replaced with the user’s own path, and some parameters related to data dimensions may need to be adjusted accordingly.
 
-```bash
-python run_apsm.py --config configs/example.yaml
-```
+
+- **state_data.npy**  
+Example state data file for reproducing the Van der Pol Oscillator experiment.
+
+---
+
+## 📝 Notes
+
+- ERA is provided as a default state-space modeling method. Other methods (e.g., **DMD**, **SSI**, **NExT+ERA**) can also be integrated as initial models.  
+- Scripts include functions for gradient-based system identification, Frobenius norm error analysis, and visualization of simulation results.  
 
 ---
 
